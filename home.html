@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Issues Tracker</title>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>hello</h1>
+    <section id="nav" class="bg-white border-b border-gray-200 px-6 py-3">
+        <div class="flex items-center justify-between">
+
+            <!-- left -->
+            <div class="flex items-center gap-2">
+                <img class="w-10 h-10"  src="./assets/github-logo.png" alt="">
+                <h2 class="font-bold text-xl">GitHub Issues Tracker</h2>
+            </div>
+
+            <!-- right  -->
+            <div class="flex items-center gap-1">
+                            <label class="input">
+        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-width="2.5"
+        fill="none"
+        stroke="currentColor"
+    >
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.3-4.3"></path>
+    </g>
+    </svg>
+    <input type="search" required placeholder="Search issues" />
+</label>
+
+            <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Issue</button>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="tabs" class="flex items-center gap-2 py-10 px-10 bg-gray-100">
+        <div class=""><button class="btn  btn-primary">All</button></div>
+        <div class=""><button class="btn btn-soft btn-primary">Open</button></div>
+        <div class=""><button class="btn btn-soft btn-primary">Closed</button></div>
+    </section>
+
 </body>
 </html>
