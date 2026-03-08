@@ -43,17 +43,17 @@
         </div>
     </section>
 
-    <section id="tabs" class="flex items-center gap-2 p-10 px-20 py-5 mt-5 bg-gray-100 ">
-        <div class=""><button class="btn btn-primary">All</button></div>
-        <div class=""><button class="btn btn-soft btn-primary">Open</button></div>
-        <div class=""><button class="btn btn-soft btn-primary">Closed</button></div>
+    <section id="issues" class="flex items-center gap-2 p-10 px-20 py-5 mt-5 bg-gray-100 ">
+        <div class=""><button id="tab-all" onclick="loadIssues('all')" class="btn btn-primary">All</button></div>
+        <div class=""><button id="tab-open" onclick="loadIssues('open')" class="btn btn-soft btn-primary">Open</button></div>
+        <div class=""><button id="tab-closed" onclick="loadIssues('closed')" class="btn btn-soft btn-primary">Closed</button></div>
     </section>
     
 
     <!-- main -->
 
-    <section class="container px-20 pt-2 mx-auto ">
-        <div class="flex items-center justify-between gap-4 p-10 py-5 mx-auto mt-5 bg-white shadow">
+    <section id="messageContainer" class="container px-10 py-5 pt-10 mx-auto mt-5 ">
+        <div class="flex items-center justify-between gap-2 p-5 px-10 mx-auto bg-white shadow">
             <!-- left -->
             <div class="flex justify-between">
             <div class="flex items-center max-w-sm gap-4 mr-5">
@@ -75,7 +75,15 @@
                     <p class=""><i class="text-purple-700 fa-solid fa-circle"></i>Closed</p>
                 </div>
             </div>
-        </div>
+        </div> 
     </section>
+        <!-- cards -->
+    <section id="issuesContainer" class="grid grid-cols-1 gap-2 p-3 px-10  md:grid-cols-2 lg:grid-cols-3">
+
+    </section>
+
+    
+    <!-- js -->
+    <script src="./script/script.js"></script>
 </body>
 </html>
