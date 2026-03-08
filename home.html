@@ -8,14 +8,14 @@
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <section id="nav" class="bg-white border-b border-gray-200 px-6 py-3">
+<body class="">
+    <section id="nav" class="px-6 py-3 bg-white border-b border-gray-200">
         <div class="flex items-center justify-between">
 
             <!-- left -->
             <div class="flex items-center gap-2">
                 <img class="w-10 h-10"  src="./assets/github-logo.png" alt="">
-                <h2 class="font-bold text-xl">GitHub Issues Tracker</h2>
+                <h2 class="text-xl font-bold">GitHub Issues Tracker</h2>
             </div>
 
             <!-- right  -->
@@ -43,11 +43,39 @@
         </div>
     </section>
 
-    <section id="tabs" class="flex items-center gap-2 py-10 px-10 bg-gray-100">
-        <div class=""><button class="btn  btn-primary">All</button></div>
+    <section id="tabs" class="flex items-center gap-2 p-10 px-20 py-5 mt-5 bg-gray-100 ">
+        <div class=""><button class="btn btn-primary">All</button></div>
         <div class=""><button class="btn btn-soft btn-primary">Open</button></div>
         <div class=""><button class="btn btn-soft btn-primary">Closed</button></div>
     </section>
+    
 
+    <!-- main -->
+
+    <section class="container px-20 pt-2 mx-auto ">
+        <div class="flex items-center justify-between gap-4 p-10 py-5 mx-auto mt-5 bg-white shadow">
+            <!-- left -->
+            <div class="flex justify-between">
+            <div class="flex items-center max-w-sm gap-4 mr-5">
+                <img src="./assets/Aperture.png" alt="">
+            </div>
+            <div class="">
+                <h2 class="text-2xl font-semibold">50 Issues</h2>
+                <p class="text-gray-400">Track and manage your project issues</p>
+            </div>
+            </div>
+
+            <!-- right -->
+            
+            <div class="flex items-center gap-4">
+                <div class="">
+                    <p class=""><i class="text-green-700 fa-solid fa-circle"></i>Open</p>
+                </div>
+                <div class="">
+                    <p class=""><i class="text-purple-700 fa-solid fa-circle"></i>Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
