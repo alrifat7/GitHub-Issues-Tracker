@@ -2,54 +2,9 @@
 
 const messageContainer = document.getElementById('messageContainer');
 const issuesContainer = document.getElementById('issuesContainer');
+const issuesDetailsModal = document.getElementById("issues-details-modal");
 
-async function messageTracker (){
-
-
-//async await
-    const res = await fetch('https://phi-lab-server.vercel.app/api/v1/lab/issue/{id}');
-    const data = await res.json();
-    // console.log(data);
-    // console.log(messageContainer);
-    if (data.data && Array.isArray(data.data)){
-        // data.data.forEach(element => {
-        //     console.log(element);
-            const btn = document.createElement("messageTracker");
-            messages.className = "container px-20 pt-2 mx-auto";
-            const div = document.createElement("div");
-            messages.innerHTML =`
-            <div class="flex items-center justify-between gap-4 p-10 py-5 mx-auto mt-5 bg-white shadow">
-            <!-- left -->
-            <div class="flex justify-between">
-            <div class="flex items-center max-w-sm gap-4 mr-5">
-                <img src="./assets/Aperture.png" alt="">
-            </div>
-            <div class="">
-                <h2 class="text-2xl font-semibold">${issues.message}</h2>
-                <p class="text-gray-400">${issues.status}</p>
-            </div>
-            </div>
-
-            <!-- right -->
-            
-            <div class="flex items-center gap-4">
-                <div class="">
-                    <p class=""><i class="text-green-700 fa-solid fa-circle"></i>Open</p>
-                </div>
-                <div class="">
-                    <p class=""><i class="text-purple-700 fa-solid fa-circle"></i>Closed</p>
-                </div>
-            </div>
-        </div>
-            `
-            messageContainer.appendChild(div);
-        };
-    } {
-        
-    }
-    
-
-
+// issues
 async function issuesCard(){
     const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
     const data = await res.json();
@@ -62,10 +17,10 @@ function displayIssues(issues){
     issues.forEach(issues => {
         console.log(issues);
         const card = document.createElement("div")
-        card.className = "shadow card card-border bg-base-100 w-96 "
+        card.className = "relative flex flex-col justify-between p-5 bg-white border border-gray-100 shadow-sm rounded-xl"
         card.innerHTML = `
                 
-    <div class=" card-body">
+    <div class=" card-body ">
         
         <div class="flex justify-between">
             <div class="">
@@ -77,7 +32,7 @@ function displayIssues(issues){
         </div>
         
 
-        <div>    <h2 class="text-xl font-semibold">${issues.title}</h2>
+        <div>    <h2 class="text-xl font-semibold" onclick="openIssuesModal(${issues.id})">${issues.title}</h2>
     <p class="text-gray-500">${issues.description}</p></div>
 
 
@@ -98,6 +53,14 @@ function displayIssues(issues){
         issuesContainer.appendChild(card);
     }) 
 }
+
+
+// modal
+function openIssuesModal(issuesId) {
+    console.log(issuesId, "issuesId");
+    issuesDetailsModal.showModal();
+};
+
 
 issuesCard();
 messageTracker();
